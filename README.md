@@ -2,116 +2,25 @@
 
 A full-stack Todo application built with Next.js and FastAPI.
 
-## Development Setup
+Frontend is deployed on Vercel.
+Backend is deployed on Railway.
 
-### Frontend (Next.js)
+Full story below.
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
+### Purpose / Reflection
+Yes, you can use this app. It's running until my Railway trial goes out.
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+However, the true goal was for me to learn how to deploy a modern web app with the frontend and backend separated. 
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+I've always believed that **learning sticks better from experimenting**, ever since my favorite physics teacher from high school taught me with only hands-on labs and no lectures.
+So, this project was mainly focused on skimming the surface and experimenting with how modern web apps work.
 
-4. Run tests:
-   ```bash
-   npm test
-   ```
+I can say that I have sucessfully done it, and along the way, I realized I have a lot to learn regarding React/Next.js and building it. This mini project has also inspired me to learn more about React Hooks and how APIs work across services and within an app.
 
-### Backend (FastAPI)
+Yes, it does mean lot of much of this code was AI assisted. However, I didn't hinder my learning; instead it provided me with the bird's eye view of the app's development, which was my goal. Nonetheless, I made an honest attempt to understand how everything connects and works. Additionally, AI didn't do everything correctly, which forces me to investigate and tinker to learn how to these apps are made.
 
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
+Looking forward, I hope to improve my skills in engineering and coding such apps, perhaps to win hackathons or build useful software.
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+Darren
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-4. Start the development server:
-   ```bash
-   uvicorn main:app --reload --port 8000
-   ```
-
-5. Run tests:
-   ```bash
-   pytest
-   ```
-
-## Deployment
-
-### Frontend (Vercel)
-
-1. Install Vercel CLI:
-   ```bash
-   npm i -g vercel
-   ```
-
-2. Deploy:
-   ```bash
-   cd frontend
-   vercel
-   ```
-
-Required environment variables:
-- `NEXT_PUBLIC_API_URL`: Backend API URL
-
-### Backend (Railway)
-
-1. Install Railway CLI:
-   ```bash
-   npm i -g @railway/cli
-   ```
-
-2. Deploy:
-   ```bash
-   cd backend
-   railway up
-   ```
-
-Required environment variables:
-- `ALLOWED_ORIGINS`: Comma-separated list of allowed frontend origins
-
-## Continuous Integration/Deployment
-
-The project uses GitHub Actions for CI/CD. On every push to the main branch:
-
-1. Frontend:
-   - Runs tests
-   - Checks types
-   - Runs linting
-   - Deploys to Vercel (if on main branch)
-
-2. Backend:
-   - Runs tests
-   - Runs linting
-   - Deploys to Railway (if on main branch)
-
-### Required Secrets
-
-Add these secrets to your GitHub repository:
-
-Frontend (Vercel):
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
-
-Backend (Railway):
-- `RAILWAY_TOKEN`
-- `RAILWAY_SERVICE_NAME`
