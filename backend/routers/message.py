@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from ..models.message import MessageInput
-from ..services.message_service import message_service
+from models.message import MessageInput
+from services.message_service import message_service
 
 router = APIRouter()
 
